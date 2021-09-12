@@ -239,6 +239,12 @@ TARGET_LINK_LIBRARIES(CustomStream OALWrapper)
 
 install(TARGETS OALWrapper DESTINATION lib)
 install(FILES ${all_includes} DESTINATION include/OALWrapper)
+install(FILES
+        include//AL//al.h
+        include//AL//alc.h
+        include//AL//alext.h
+        include//AL//efx.h
+        DESTINATION include/AL)
 
 # Exports
 #SET(OALWRAPPER_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include PARENT_SCOPE)
