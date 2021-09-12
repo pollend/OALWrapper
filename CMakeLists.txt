@@ -237,5 +237,8 @@ TARGET_LINK_LIBRARIES(Playlist OALWrapper)
 ADD_EXECUTABLE(CustomStream EXCLUDE_FROM_ALL tests/CustomStream/main.cpp)
 TARGET_LINK_LIBRARIES(CustomStream OALWrapper)
 
+install(TARGETS OALWrapper DESTINATION lib)
+install(FILES ${all_includes} DESTINATION include)
+
 # Exports
 #SET(OALWRAPPER_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include PARENT_SCOPE)
